@@ -16,9 +16,7 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
 
     private List<ItemBoardList> items;
 
-    BoardListAdapter(){
 
-    }
 
     public BoardListAdapter(List<ItemBoardList> items){
         this.items = items;
