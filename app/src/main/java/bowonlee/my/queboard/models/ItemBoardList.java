@@ -1,39 +1,61 @@
 package bowonlee.my.queboard.models;
 
+import android.graphics.BitmapFactory;
+
 import java.util.ArrayList;
 import java.util.Date;
 
 public class ItemBoardList {
-    /*
+
+
+
+
     int level;
     String nickname;
-    String title;
-
-    Date recruitEnd;
-    Date startDay;
-    Date endDay;
-
-    int qualification;
-    int reword;
     ArrayList<String> tagList;
-
     boolean checkedLike;
 
-    int numberOfLike;
-    int numberOfCommnet;
-    int numberOfMaxMenber;
-    int numberOfCurrentMeber;
-    */
-    int dummy;
-    public ItemBoardList(int data){
-        dummy = data;
+
+
+    public ItemBoardList(int level,String nickname, ArrayList<String> tagList,boolean isChecked){
+        this.level = level;
+        this.nickname = nickname;
+        this.tagList = tagList;
+        this.checkedLike = isChecked;
+
+
     }
 
-    public int getDummy() {
-        return dummy;
+    public ArrayList<String> getTagList() {
+        return tagList;
     }
 
-    public void setDummy(int dummy) {
-        this.dummy = dummy;
+    public void setTagList(ArrayList<String> tagList) {
+        this.tagList = tagList;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+
+    public void setCheckedLike(boolean checkedLike) {
+        this.checkedLike = checkedLike;
+    }
+
+    public boolean isCheckedLike() {
+        return checkedLike;
     }
 }

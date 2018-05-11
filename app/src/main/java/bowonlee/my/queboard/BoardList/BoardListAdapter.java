@@ -16,12 +16,10 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
 
     private List<ItemBoardList> items;
 
-
-
-    public BoardListAdapter(List<ItemBoardList> items){
-        this.items = items;
+    BoardListAdapter(){
 
     }
+
     @NonNull
     @Override
     public BoardListHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,11 +32,12 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BoardListHolder holder, int position) {
-        holder.setData(position);
+    public void onBindViewHolder(BoardListHolder holder, int position) {
+        holder.setItems(items.get(position));
 
 
     }
+
 
     public void setItem(List<ItemBoardList> items) {
         this.items = items;

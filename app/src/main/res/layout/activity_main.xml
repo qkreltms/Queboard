@@ -9,18 +9,36 @@
 
     >
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="#000"
-        android:layout_weight="1"
-        >
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:background="#FFF"
 
-    </LinearLayout>
+        >
+
+        <Button
+            android:id="@+id/main_btn_suggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            />
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo_queboard" />
+
+        <Button
+            android:id="@+id/main_btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Button" />
+
+    </FrameLayout>
         <FrameLayout
             android:id="@+id/main_fragment_container"
             android:layout_width="match_parent"
@@ -41,7 +59,7 @@
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Button1" />
 
