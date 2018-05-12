@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-
+    android:weightSum="720"
     >
 
     <FrameLayout
@@ -14,14 +14,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="#FFF"
-
+        android:layout_weight="48"
         >
 
         <Button
             android:id="@+id/main_btn_suggest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="left"
+            android:background="@drawable/selector_btn_home_add"
             />
 
         <ImageView
@@ -39,20 +40,21 @@
             android:text="Button" />
 
     </FrameLayout>
-        <FrameLayout
-            android:id="@+id/main_fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="14"
-            ></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="464dp"
+        android:layout_weight="624"></FrameLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="48"
         android:orientation="horizontal"
-        android:layout_weight="1"
         android:background="#000"
+
         >
 
 
@@ -61,35 +63,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button1" />
+            android:text="Button1"
+
+            />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button2" />
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button3" />
+            android:text="Button3"
+
+            />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button4" />
+            android:text="Button4"
+
+            />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button5" />
+            android:text="Button5"
+
+            />
     </LinearLayout>
 
 </LinearLayout>

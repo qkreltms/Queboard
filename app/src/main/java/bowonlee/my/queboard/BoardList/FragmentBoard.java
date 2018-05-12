@@ -44,6 +44,7 @@ public class FragmentBoard extends BaseFragment {
         mBoardList.setAdapter(mBoardAdapter);
 
         mBoardAdapter.setItem(dummyItem);
+
         mBoardAdapter.notifyDataSetChanged();
 
 
