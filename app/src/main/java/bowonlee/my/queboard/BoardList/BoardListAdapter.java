@@ -1,5 +1,6 @@
 package bowonlee.my.queboard.BoardList;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import bowonlee.my.queboard.BulletinActivity;
 import bowonlee.my.queboard.R;
 import bowonlee.my.queboard.models.BaseQuestData;
 
@@ -35,6 +37,13 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>
     @Override
     public void onBindViewHolder(BoardListHolder holder, int position) {
         holder.setItems(items.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), BulletinActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
 
     }

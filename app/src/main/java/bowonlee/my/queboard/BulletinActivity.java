@@ -23,7 +23,7 @@ public class BulletinActivity extends AppCompatActivity {
                 if (getTeamButton.getText().equals("퀘스트 지원하기")) {
                     getTeamButton.setText("퀘스트 지원 취소하기");
                 } else {
-                    getTeamButton.setText("퀘스트 지원 지원하기");
+                    getTeamButton.setText("퀘스트 지원하기");
                 }
             }
         });
