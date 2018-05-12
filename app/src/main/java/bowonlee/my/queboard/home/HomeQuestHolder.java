@@ -14,13 +14,13 @@ public class HomeQuestHolder extends RecyclerView.ViewHolder {
     private TextView mLevelTextView;
     private TextView mNicknameTextView;
     private CheckBox mLikeBox;
-    private String mTagString;
-    private int mAmountOfLikeTextView;
-    private int mAmountOfCommnetTextView;
-    private Boolean isOnline;
-    private String mRecruitEndTextView;
-    private String mStartQuestTextView;
-    private String mEndQuestTextView;
+    private TextView mTagStringTextView;
+    private TextView mAmountOfLikeTextView;
+    private TextView mAmountOfCommnetTextView;
+    private CheckBox mOnlineCheckBox;
+    private TextView mRecruitEndTextView;
+    private TextView mStartQuestTextView;
+    private TextView mEndQuestTextView;
 
 
     public HomeQuestHolder(View itemView) {
@@ -29,6 +29,18 @@ public class HomeQuestHolder extends RecyclerView.ViewHolder {
 
 
     public void setHolder(HomeQuestData data) {
+        //mProfileImageView.setImageDrawable();
+        mLevelTextView.setText(data.getLevel());
+        mNicknameTextView.setText(data.getNickname());
+        mLikeBox.setChecked(data.isCheckedLike());
+        //mTagStringTextView.setText(data.getTagList());
+        mAmountOfLikeTextView.setText(data.getAmountOfLike());
+        mAmountOfCommnetTextView.setText(data.getAmountOfCommnet());
+        mOnlineCheckBox.setChecked(data.getOnline());
+
+        mRecruitEndTextView.setText(data.getRecruitData());
+        mStartQuestTextView.setText(data.getQuestStartDay());
+        mEndQuestTextView.setText(data.getQuestEndDay());
 
     }
 }

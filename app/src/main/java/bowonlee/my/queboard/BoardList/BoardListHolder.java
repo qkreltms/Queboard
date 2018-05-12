@@ -9,7 +9,7 @@ import android.widget.TextView;
 import bowonlee.my.queboard.R;
 import bowonlee.my.queboard.models.BaseQuestData;
 
-public class BoardListHolder extends RecyclerView.ViewHolder {
+public class BoardListHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     private ImageView mImageView;
     private TextView mLevelTextView;
@@ -21,6 +21,18 @@ public class BoardListHolder extends RecyclerView.ViewHolder {
 
     private BaseQuestData mItemBoardList ;
 
+    @Override
+    public void onClick(View view) {
+
+    }
+
+    interface OnBoarderItemClickListener{
+         void onHolderItemClick(BaseQuestData data);
+    }
+
+
+    OnBoarderItemClickListener listener;
+
     public BoardListHolder(View itemView) {
         super(itemView);
 
@@ -30,6 +42,8 @@ public class BoardListHolder extends RecyclerView.ViewHolder {
         mLikeBox = (CheckBox)itemView.findViewById(R.id.viewholder_check_like);
         mNameTextView = (TextView)itemView.findViewById(R.id.viewholder_text_nickname);
 
+
+        itemView.setOnClickListener(this);
     }
 
     public void setItems(BaseQuestData item){
@@ -46,7 +60,7 @@ public class BoardListHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setData(){
-
+    public void setOnClickListener(OnBoarderItemClickListener listener){
+        this.listener = listener;
     }
 }
