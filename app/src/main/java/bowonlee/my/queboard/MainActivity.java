@@ -19,7 +19,7 @@ import bowonlee.my.queboard.BoardList.FragmentBoard;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] fragmentNames = {"Home", "Board", "Profile", "Alarm"};
+    String[] fragmentNames = {"Home", "Board", "Profile", "Notification"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
