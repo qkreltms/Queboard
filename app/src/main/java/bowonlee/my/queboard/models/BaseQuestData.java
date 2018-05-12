@@ -1,30 +1,22 @@
 package bowonlee.my.queboard.models;
 
 import android.graphics.BitmapFactory;
-import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-public class BaseQuestData {
-
-
-
+public class ItemBoardList {
 
     int level;
     String nickname;
     ArrayList<String> tagList;
     boolean checkedLike;
 
-
-
-    public BaseQuestData(int level, String nickname, ArrayList<String> tagList, boolean isChecked){
+    public ItemBoardList(int level,String nickname, ArrayList<String> tagList,boolean isChecked){
         this.level = level;
         this.nickname = nickname;
         this.tagList = tagList;
         this.checkedLike = isChecked;
-
-
     }
 
     public ArrayList<String> getTagList() {

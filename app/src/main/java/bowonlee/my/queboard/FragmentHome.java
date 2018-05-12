@@ -15,9 +15,4 @@ public class FragmentHome extends BaseFragment{
         return inflater.inflate(R.layout.fragment_home,container,false);
     }
 
-    public static Fragment newInstance(){
-        return new FragmentHome();
-    }
-
-
 }
