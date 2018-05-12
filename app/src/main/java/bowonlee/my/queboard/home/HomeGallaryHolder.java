@@ -17,7 +17,6 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder{
     private TextView mTagStringTextView;
     private TextView mAmountOfLikeTextView;
     private TextView mAmountOfCommnetTextView;
-    private CheckBox mOnlineCheckBox;
     private ImageView mPhotoImageView;
 
     public HomeGallaryHolder(View itemView) {
@@ -28,7 +27,8 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder{
         mLikeBox = (CheckBox)itemView.findViewById(R.id.viewholder_main_gallary_like);
         mTagStringTextView = (TextView)itemView.findViewById(R.id.viewholder_main_gallary_likenum);
         mAmountOfLikeTextView = (TextView)itemView.findViewById(R.id.viewholder_main_gallary_likenum);
-
+        mAmountOfCommnetTextView = (TextView)itemView.findViewById(R.id.viewholder_main_gallary_commnetnum);
+        mPhotoImageView = (ImageView)itemView.findViewById(R.id.viewholder_main_gallary_photo);
 
 
     }
@@ -43,7 +43,7 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder{
         //mTagStringTextView.setText(data.getTagList());
         mAmountOfLikeTextView.setText(data.getAmountOfLike());
         mAmountOfCommnetTextView.setText(data.getAmountOfCommnet());
-        mOnlineCheckBox.setChecked(data.getOnline());
+        //mOnlineCheckBox.setChecked(data.getOnline());
         //mPhotoImageView.setImageDrawable();
     }
 
