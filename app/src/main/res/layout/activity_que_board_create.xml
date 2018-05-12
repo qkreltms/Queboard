@@ -28,20 +28,6 @@
             android:text="퀘스트 생성" />
 
         <TextView
-            android:text="제목 입력"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </android.support.design.widget.TextInputLayout>
-
-        <TextView
             android:text="Tag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
