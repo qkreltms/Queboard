@@ -1,21 +1,53 @@
 package bowonlee.my.queboard.BoardList;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import bowonlee.my.queboard.R;
+import bowonlee.my.queboard.models.ItemBoardList;
 
 public class BoardListHolder extends RecyclerView.ViewHolder {
 
-    TextView textView;
+    private ImageView mImageView;
+    private TextView mLevelTextView;
+    private TextView mTagTextView;
+    private CheckBox mLikeBox;
+    private TextView mNameTextView;
+
+    private String tagString;
+
+    private ItemBoardList mItemBoardList ;
+
     public BoardListHolder(View itemView) {
         super(itemView);
-        textView = (TextView)itemView.findViewById(R.id.testdummydata);
 
+        mImageView = (ImageView)itemView.findViewById(R.id.viewholder_image);
+        mLevelTextView = (TextView)itemView.findViewById(R.id.viewholder_text_level);
+        mTagTextView = (TextView)itemView.findViewById(R.id.viewholder_tag);
+        mLikeBox = (CheckBox)itemView.findViewById(R.id.viewholder_check_like);
+        mNameTextView = (TextView)itemView.findViewById(R.id.viewholder_text_nickname);
 
     }
-    public void setData(int data){
-        textView.setText(data+"dummy");
+
+    public void setItems(ItemBoardList item){
+            this.mItemBoardList = item;
+
+            mLevelTextView.setText(String.format("Lv. %d",mItemBoardList.getLevel())) ;
+            mLikeBox.setChecked(mItemBoardList.isCheckedLike());
+            mNameTextView.setText(mItemBoardList.getNickname());
+
+        for(int i = 1;i<mItemBoardList.getTagList().size();i++){
+            tagString += "#"+mItemBoardList.getTagList().get(i) + " ";
+        }
+            mTagTextView.setText(tagString);
+
+    }
+
+    public void setData(){
+
     }
 }

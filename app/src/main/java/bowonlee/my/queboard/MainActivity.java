@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button4;
     private Button button5;
 
+    private Button mSuggestQuestButton;
+    private Button mSearchButton;
+
     private FragmentHome fragment1;
     private FragmentBoard fragment2;
     private FragmentProfile fragment3;

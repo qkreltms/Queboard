@@ -44,16 +44,32 @@ public class FragmentBoard extends BaseFragment {
         mBoardList.setAdapter(mBoardAdapter);
 
         mBoardAdapter.setItem(dummyItem);
+
         mBoardAdapter.notifyDataSetChanged();
 
 
     }
 
     private void makeDummy(){
+
         dummyItem = new ArrayList<>();
         dummyItem.clear();
+
+        ArrayList<String> taglist = new ArrayList<>();
+        taglist.add("tag1");
+        taglist.add("tag2");
+        taglist.add("tag3");
+        taglist.add("tag4");
+        taglist.add("tag5");
+        taglist.add("tag6");
+        taglist.add("tag7");
+        taglist.add("tag8");
+        taglist.add("tag9");
+        taglist.add("tag10");
+
+
         for(int i =0;i<10;i++){
-            dummyItem.add(new ItemBoardList(i));
+            dummyItem.add(new ItemBoardList(i,"dummy",taglist,true));
         }
 
     }
