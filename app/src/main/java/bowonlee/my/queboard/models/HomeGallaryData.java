@@ -32,6 +32,7 @@ public class HomeGallaryData extends HomeListData{
     public HomeGallaryData setGallaryData(int profile, int level, String name, ArrayList<String> tags, boolean liked, int likeSum, int commnetSum, int photoId){
         setProfilePhotoId(profile);
         setLevel(level);
+        setNickname(name);
         setTagList(tags);
         setCheckedLike(liked);
         setAmountOfLike(likeSum);

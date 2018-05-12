@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,12 +55,19 @@ public class FragmentHome extends BaseFragment {
         tag.add("#tag");
         tag.add("#tag");
         tag.add("#tag");
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat sdf = new SimpleDateFormat("yymmdd");
+        String getTime = sdf.format(date);
         for (int i = 0; i < 5; i++) {
-            HomeGallaryData data = new HomeGallaryData().setQuestData(R.drawable.drawable_sample, i, "temp", tag, true, true, 5, 3, null, null, null);
+            HomeGallaryData data = new HomeGallaryData().setQuestData(R.drawable.drawable_sample, i, "temp", tag, true, true, 5, 3, getTime, getTime, getTime);
             dummy.add(data);
         }
 
+
+
         HomeGallaryData data = new HomeGallaryData().setGallaryData(R.drawable.drawable_sample, 6, "gallary", tag, true, 3, 4, R.drawable.drawable_sample);
+
         dummy.add(data);
 
     }
