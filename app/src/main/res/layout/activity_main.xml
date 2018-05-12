@@ -17,9 +17,10 @@
 
         <Button
             android:id="@+id/main_btn_suggest"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_gravity="left"
+            android:layout_margin="2dp"
             android:background="@drawable/selector_btn_home_add" />
 
         <ImageView
@@ -27,14 +28,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:src="@drawable/logo_queboard" />
+            android:src="@drawable/logo_queboard"/>
 
         <Button
+            android:background="@drawable/selector_btn_message_button"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_margin="2dp"
             android:id="@+id/main_btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="Button" />
+            android:layout_gravity="right"/>
 
     </FrameLayout>
 

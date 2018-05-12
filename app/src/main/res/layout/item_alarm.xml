@@ -5,6 +5,7 @@
     android:orientation="horizontal">
 
     <ImageView
+        android:scaleType="fitXY"
         android:id="@+id/item_alarm_imageView"
         android:layout_width="50dp"
         android:layout_height="50dp" />
