@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_launcher"
-            android:id="@+id/viewholder_main_gallary_image"
+            android:id="@+id/viewholder_main_gallary_profile_image"
 
             />
         <TextView
@@ -39,11 +39,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewholder_main_gallary_checked"
-            />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -62,7 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:id="@+id/viewholder_main_gallary_photo"
         android:src="@drawable/logo_queboard"/>
+
 </RelativeLayout>
 <TextView
     android:layout_width="wrap_content"
@@ -75,7 +73,9 @@
     android:layout_height="wrap_content">
     <CheckBox
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/viewholder_main_gallary_like"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

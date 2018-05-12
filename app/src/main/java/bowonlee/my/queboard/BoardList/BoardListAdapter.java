@@ -12,7 +12,8 @@ import java.util.List;
 import bowonlee.my.queboard.R;
 import bowonlee.my.queboard.models.BaseQuestData;
 
-public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
+public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>
+        implements BoardListHolder.OnBoarderItemClickListener{
 
     private List<BaseQuestData> items;
 
@@ -51,4 +52,8 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
     }
 
 
+    @Override
+    public void onHolderItemClick(BaseQuestData data) {
+        // ClickEvent
+    }
 }
