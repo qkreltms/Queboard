@@ -3,8 +3,11 @@ package bowonlee.my.queboard;
 import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -22,6 +25,8 @@ import java.util.List;
 
 public class FragmentProfile extends BaseFragment {
 
+    private BottomNavigationView bottomNavigationView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -29,7 +34,28 @@ public class FragmentProfile extends BaseFragment {
 
 
         showRaderChart(view);
+        initBottomNavi(view);
         return view;
+    }
+
+    public void initBottomNavi(View view) {
+        bottomNavigationView = view.findViewById(R.id.fragment_profile_bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_gallery: {
+
+                        return true;
+                    }
+                    case R.id.action_project: {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     public void showRaderChart(View view) {
