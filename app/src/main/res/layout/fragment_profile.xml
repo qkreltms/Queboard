@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/fragment_profile_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -148,10 +149,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/mainActivity_bottomNavigationView"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
         app:itemTextColor="@android:color/white"
         app:itemBackground="@android:color/holo_orange_dark"
         app:itemIconTint="@android:color/white"
         app:menu="@menu/bottom_navigation_profile">
-
     </android.support.design.widget.BottomNavigationView>
 </RelativeLayout>
