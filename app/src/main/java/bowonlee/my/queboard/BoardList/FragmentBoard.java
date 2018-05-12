@@ -3,6 +3,8 @@ package bowonlee.my.queboard.BoardList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,6 +25,7 @@ public class FragmentBoard extends BaseFragment {
 
     private RecyclerView mBoardList;
     private BoardListAdapter mBoardAdapter;
+    private DividerItemDecoration dividerItemDecoration;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,6 +41,14 @@ public class FragmentBoard extends BaseFragment {
         mBoardAdapter = new BoardListAdapter();
 
         mBoardList.setLayoutManager(new LinearLayoutManager(null, LinearLayout.VERTICAL,false));
+
+        dividerItemDecoration = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
+        mBoardList.addItemDecoration(dividerItemDecoration);
+        mBoardList.setHasFixedSize(true);
+        RecyclerView.LayoutManager manager = new LinearLayoutManager(getActivity());
+        mBoardList.setLayoutManager(manager);
+        mBoardList.setItemAnimator(new DefaultItemAnimator());
+
 
         makeDummy();
 

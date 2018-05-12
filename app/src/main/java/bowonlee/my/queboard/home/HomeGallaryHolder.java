@@ -29,7 +29,7 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder {
         mLevelTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_text_level);
         mNicknameTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_nickname);
         mLikeBox = (CheckBox) itemView.findViewById(R.id.viewholder_main_gallary_like);
-        mTagStringTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_likenum);
+        mTagStringTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_tag);
         mAmountOfLikeTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_likenum);
         mAmountOfCommnetTextView = (TextView) itemView.findViewById(R.id.viewholder_main_gallary_commnetnum);
         mPhotoImageView = (ImageView) itemView.findViewById(R.id.viewholder_main_gallary_photo);
@@ -46,7 +46,7 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder {
         mLevelTextView.setText(data.getLevel() + "");
         mNicknameTextView.setText(data.getNickname());
         mLikeBox.setChecked(data.isCheckedLike());
-        //mTagStringTextView.setText(data.getTa);
+        ;
         mAmountOfLikeTextView.setText(data.getAmountOfLike() + "");
         mAmountOfCommnetTextView.setText(data.getAmountOfCommnet() + "");
 
@@ -58,7 +58,11 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder {
 
         }
 
-
+        String tagString = "";
+        for(int i = 1;i<data.getTagList().size();i++){
+            tagString += data.getTagList().get(i) + " ";
+        }
+        mTagStringTextView.setText(tagString);
     }
 
     public void setGallaryItems(HomeGallaryData data){
