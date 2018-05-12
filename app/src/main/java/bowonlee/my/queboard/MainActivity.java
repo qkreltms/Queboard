@@ -18,7 +18,7 @@ import bowonlee.my.queboard.BoardList.FragmentBoard;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] fragmentNames = {"Home", "Board", "Profile", "Alam", "Community"};
+    String[] fragmentNames = {"Home", "Board", "Profile", "Alam"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPager pager;
 
         pager = findViewById(R.id.MainActivity_viewPager_container);
-        pager.setOffscreenPageLimit(5);
+        pager.setOffscreenPageLimit(4);
 
         ViewPagerAdapter adatper = new ViewPagerAdapter(getSupportFragmentManager());
 
@@ -71,13 +71,11 @@ public class MainActivity extends AppCompatActivity {
         FragmentBoard fragmentBoard = new FragmentBoard();
         FragmentProfile fragmentProfile = new FragmentProfile();
         FragmentAlarm fragmentAlarm = new FragmentAlarm();
-        FragmentCommunity fragmentCommunity = new FragmentCommunity();
 
         adatper.addItem(fragmentHome);
         adatper.addItem(fragmentBoard);
         adatper.addItem(fragmentProfile);
         adatper.addItem(fragmentAlarm);
-        adatper.addItem(fragmentCommunity);
 
         pager.setAdapter(adatper);
     }
