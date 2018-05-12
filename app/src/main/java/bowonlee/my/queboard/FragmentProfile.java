@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FragmentProfile extends android.support.v4.app.Fragment {
+public class FragmentProfile extends BaseFragment {
 
     @Nullable
     @Override

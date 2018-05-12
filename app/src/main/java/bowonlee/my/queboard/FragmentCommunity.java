@@ -15,9 +15,4 @@ public class FragmentCommunity extends BaseFragment{
         return inflater.inflate(R.layout.fragment_community,container,false);
     }
 
-
-    public static FragmentCommunity newInstance(){
-        return new FragmentCommunity();
-    }
-
 }

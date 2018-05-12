@@ -7,23 +7,16 @@ import java.util.Date;
 
 public class ItemBoardList {
 
-
-
-
     int level;
     String nickname;
     ArrayList<String> tagList;
     boolean checkedLike;
-
-
 
     public ItemBoardList(int level,String nickname, ArrayList<String> tagList,boolean isChecked){
         this.level = level;
         this.nickname = nickname;
         this.tagList = tagList;
         this.checkedLike = isChecked;
-
-
     }
 
     public ArrayList<String> getTagList() {
