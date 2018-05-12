@@ -1,5 +1,6 @@
 package bowonlee.my.queboard;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,15 +20,34 @@ import bowonlee.my.queboard.BoardList.FragmentBoard;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] fragmentNames = {"Home", "Board", "Profile", "Notification"};
+    private String[] fragmentNames = {"Home", "Board", "Profile", "Notification"};
+    private Button createButton;
+    private Button messageButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getWindow().setStatusBarColor(Color.RED);
+        createButton = findViewById(R.id.mainActivity_button_create);
+        messageButton = findViewById(R.id.mainActivity_button_message);
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QueBoardCreateActivity.class);
+                startActivity(intent);
+            }
+        });
+        messageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QueBoardCreateActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        getWindow().setStatusBarColor(Color.RED);
         initViewPager();
     }
 
@@ -68,19 +88,19 @@ public class MainActivity extends AppCompatActivity {
         pager = findViewById(R.id.MainActivity_viewPager_container);
         pager.setOffscreenPageLimit(4);
 
-        ViewPagerAdapter adatper = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         FragmentHome fragmentHome = new FragmentHome();
         FragmentBoard fragmentBoard = new FragmentBoard();
         FragmentProfile fragmentProfile = new FragmentProfile();
         FragmentAlarm fragmentAlarm = new FragmentAlarm();
 
-        adatper.addItem(fragmentHome);
-        adatper.addItem(fragmentBoard);
-        adatper.addItem(fragmentProfile);
-        adatper.addItem(fragmentAlarm);
+        adapter.addItem(fragmentHome);
+        adapter.addItem(fragmentBoard);
+        adapter.addItem(fragmentProfile);
+        adapter.addItem(fragmentAlarm);
 
-        pager.setAdapter(adatper);
+        pager.setAdapter(adapter);
     }
 
 

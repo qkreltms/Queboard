@@ -1,6 +1,7 @@
 package bowonlee.my.queboard;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,11 +14,18 @@ public class QueBoardCreateActivity extends AppCompatActivity {
     private Button startDateButton;
     private Button dueDateButton;
     private Button finishQueDateButton;
+    private Button completionButton;
+    private Button cancleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_que_board_create);
+
+        getWindow().setStatusBarColor(Color.RED);
+
+        completionButton = findViewById(R.id.QueBoardCreateActivity_button_completion);
+        cancleButton = findViewById(R.id.QueBoardCreateActivity_button_cancel);
 
         startDateButton = findViewById(R.id.QueBoardCreateActivity_button_startDate);
         dueDateButton = findViewById(R.id.QueBoardCreateActivity_button_dueDate);
@@ -42,6 +50,20 @@ public class QueBoardCreateActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finishQueDateButtonDialog(2018, 05, 12);
+            }
+        });
+
+        completionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        cancleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

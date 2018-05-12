@@ -1,5 +1,6 @@
 package bowonlee.my.queboard;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class ProjectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
+        getWindow().setStatusBarColor(Color.RED);
 
         ArrayList<ProjectModel> quests = new ArrayList<>();
         quests.add(new ProjectModel("test", R.drawable.people));

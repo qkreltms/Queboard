@@ -16,7 +16,7 @@
         android:layout_weight="48">
 
         <Button
-            android:id="@+id/main_btn_suggest"
+            android:id="@+id/mainActivity_button_create"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_gravity="left"
@@ -35,7 +35,7 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_margin="2dp"
-            android:id="@+id/main_btn_search"
+            android:id="@+id/mainActivity_button_message"
             android:layout_gravity="right"/>
 
     </FrameLayout>

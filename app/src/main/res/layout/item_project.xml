@@ -18,7 +18,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="10dp"
             android:text="현재 퀘스트"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:id="@+id/item_project_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

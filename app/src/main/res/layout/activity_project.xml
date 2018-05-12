@@ -9,6 +9,8 @@
 
     <TextView
         android:text="진행중인 퀘스트"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -21,6 +23,8 @@
 
     <TextView
         android:text="완료된 퀘스트"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_red_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
