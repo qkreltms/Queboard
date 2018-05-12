@@ -1,6 +1,7 @@
 package bowonlee.my.queboard;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -38,7 +39,7 @@ public class FragmentProfile extends BaseFragment {
         return view;
     }
 
-    public void initBottomNavi(View view) {
+    public void initBottomNavi(final View view) {
         bottomNavigationView = view.findViewById(R.id.fragment_profile_bottomNavigationView);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -46,10 +47,13 @@ public class FragmentProfile extends BaseFragment {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_gallery: {
-
+                        Intent intent = new Intent(view.getContext(), GalleryActivity.class);
+                        startActivity(intent);
                         return true;
                     }
                     case R.id.action_project: {
+                        Intent intent = new Intent(view.getContext(), GalleryActivity.class);
+                        startActivity(intent);
                         return true;
                     }
                 }
