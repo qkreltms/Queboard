@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -148,11 +148,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_profile_bottomNavigationView"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
         app:itemTextColor="@android:color/white"
         app:itemBackground="@android:color/holo_orange_dark"
         app:itemIconTint="@android:color/white"
-        app:menu="@menu/bottom_navigation_profile">
+        app:menu="@menu/bottom_navigation_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="30dp">
     </android.support.design.widget.BottomNavigationView>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
