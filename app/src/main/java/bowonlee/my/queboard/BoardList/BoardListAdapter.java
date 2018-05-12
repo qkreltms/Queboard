@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.util.List;
 
 import bowonlee.my.queboard.BulletinActivity;
@@ -45,8 +48,12 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>
             }
         });
 
-
+        Glide.with(holder.itemView.getContext())
+                .load(R.drawable.drawable_sample)
+                .apply(new RequestOptions().circleCrop())
+                .into(holder.mImageView);
     }
+
 
 
     public void setItem(List<BaseQuestData> items) {

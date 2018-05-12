@@ -1,5 +1,6 @@
 package bowonlee.my.queboard.home;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
+import bowonlee.my.queboard.BulletinActivity;
 import bowonlee.my.queboard.GalleryActivity;
 import bowonlee.my.queboard.R;
 import bowonlee.my.queboard.models.HomeGallaryData;
@@ -43,6 +45,14 @@ public class HomeGallaryAdapter extends RecyclerView.Adapter<HomeGallaryHolder> 
                 .load(datas.get(position).getProfilePhotoId())
                 .apply(new RequestOptions().circleCrop())
                 .into(holder.mProfileImageView);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), BulletinActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -11,7 +11,7 @@ import bowonlee.my.queboard.models.BaseQuestData;
 
 public class BoardListHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    private ImageView mImageView;
+    public ImageView mImageView;
     private TextView mLevelTextView;
     private TextView mTagTextView;
     private CheckBox mLikeBox;
