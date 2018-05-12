@@ -53,6 +53,7 @@ public class BoardListHolder extends RecyclerView.ViewHolder implements View.OnC
             mLikeBox.setChecked(mItemBoardList.isCheckedLike());
             mNameTextView.setText(mItemBoardList.getNickname());
 
+            tagString = "";
         for(int i = 1;i<mItemBoardList.getTagList().size();i++){
             tagString += "#"+mItemBoardList.getTagList().get(i) + " ";
         }
