@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FragmentProfile extends Fragment {
+public class FragmentProfile extends android.support.v4.app.Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment,container,false);
+        View view = inflater.inflate(R.layout.fragment_profile,container,false);
 
 
 //        Glide.with(customViewHolder.imageView.getContext())
