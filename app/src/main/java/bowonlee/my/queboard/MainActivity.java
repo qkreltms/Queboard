@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mSuggestQuestButton;
     private Button mSearchButton;
 
-    private FragmentHome fragment1;
-    private FragmentBoard fragment2;
-    private FragmentProfile fragment3;
-    private FragmentAlarm fragment4;
-    private FragmentCommunity fragment5;
+    private FragmentHome fragmentHome;
+    private FragmentBoard fragmentBoard;
+    private FragmentProfile fragmentProfile;
+    private FragmentAlarm fragmentAlarm;
+    private FragmentCommunity fragmentCommunity;
 
     private android.support.v4.app.FragmentManager mFragmentManager;
     private FragmentTransaction mFragmentTransaction;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
 
-        mFragmentTransaction.replace(R.id.main_fragment_container,fragment1.newInstance()).commit();
+        mFragmentTransaction.replace(R.id.main_fragment_container,fragmentHome.newInstance()).commit();
 
     }
 
@@ -70,32 +70,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button : {
                 mFragmentTransaction.replace(R.id.main_fragment_container,
-                        fragment1.newInstance());
+                        fragmentHome.newInstance());
                 mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
 
             }break;
             case R.id.button2 : {
                 mFragmentTransaction.replace(R.id.main_fragment_container,
-                        fragment2.newInstance());
+                        fragmentBoard.newInstance());
                 mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
             }break;
             case R.id.button3 : {
                 mFragmentTransaction.replace(R.id.main_fragment_container,
-                        fragment3.newInstance());
+                        fragmentProfile.newInstance());
                 mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
             }break;
             case R.id.button4 : {
                 mFragmentTransaction.replace(R.id.main_fragment_container,
-                        fragment4.newInstance());
+                        fragmentAlarm.newInstance());
                 mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
             }break;
             case R.id.button5 : {
                 mFragmentTransaction.replace(R.id.main_fragment_container,
-                        fragment5.newInstance());
+                        fragmentCommunity.newInstance());
                 mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
             }break;
