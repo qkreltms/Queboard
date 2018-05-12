@@ -1,6 +1,5 @@
 package bowonlee.my.queboard;
 
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;
 import java.util.List;
 
-import bowonlee.my.queboard.models.projectModel;
+import bowonlee.my.queboard.models.ProjectModel;
 
 public class ProjectActivity extends AppCompatActivity {
 
@@ -27,32 +26,32 @@ public class ProjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
 
-        ArrayList<projectModel> quests = new ArrayList<>();
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
-        quests.add(new projectModel("test", R.drawable.people));
+        ArrayList<ProjectModel> quests = new ArrayList<>();
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("test", R.drawable.people));
 
         RecyclerView recyclerView = findViewById(R.id.projectActivity_recyclerView_onGoingQues);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new ProjectActivityRecyclerViewAdapter(quests));
+        recyclerView.setAdapter(new AlarmActivityRecyclerViewAdapter(quests));
         recyclerView.setHasFixedSize(true);
 
-        ArrayList<projectModel> quests1 = new ArrayList<>();
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
-        quests1.add(new projectModel("test", R.drawable.mail));
+        ArrayList<ProjectModel> quests1 = new ArrayList<>();
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("test", R.drawable.mail));
 
 
         RecyclerView recyclerView1 = findViewById(R.id.projectActivity_recyclerView_completedQues);
@@ -62,11 +61,11 @@ public class ProjectActivity extends AppCompatActivity {
 
     }
 
-    class ProjectActivityRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    class AlarmActivityRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-        List<projectModel> quests;
+        List<ProjectModel> quests;
 
-        public ProjectActivityRecyclerViewAdapter(ArrayList<projectModel> arrayList) {
+        public AlarmActivityRecyclerViewAdapter(ArrayList<ProjectModel> arrayList) {
             quests = arrayList;
         }
 
@@ -108,9 +107,9 @@ public class ProjectActivity extends AppCompatActivity {
 
     class ProjectActivityRecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-        List<projectModel> quests;
+        List<ProjectModel> quests;
 
-        public ProjectActivityRecyclerViewAdapter1(ArrayList<projectModel> arrayList) {
+        public ProjectActivityRecyclerViewAdapter1(ArrayList<ProjectModel> arrayList) {
             quests = arrayList;
         }
 
