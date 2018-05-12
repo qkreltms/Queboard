@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ninepatch_boarder_boader"
     android:orientation="vertical"
     android:padding="10dp"
     android:paddingBottom="10dp"
@@ -54,18 +53,25 @@
 
             <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/viewholder_check_like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:button="@null"
+                android:background="@drawable/selector_checkbox_favorite"
+                android:checked="false" />
 
             <Button
                 android:id="@+id/viewholder_btn_share"
                 android:layout_width="20dp"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:background="@drawable/drawable_image_share_48dp"
+                />
 
             <Button
                 android:id="@+id/viewholder_btn_more"
                 android:layout_width="20dp"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:background="@drawable/drawable_image_more_vert_black_48dp"
+                />
         </LinearLayout>
 
     </LinearLayout>

@@ -42,14 +42,36 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder {
 
 
     public void setHolder(HomeGallaryData data) {
-        //mProfileImageView.setImageDrawable();
+        mProfileImageView.setImageResource(data.getProfilePhotoId());
         mLevelTextView.setText(data.getLevel() + "");
         mNicknameTextView.setText(data.getNickname());
         mLikeBox.setChecked(data.isCheckedLike());
         //mTagStringTextView.setText(data.getTa);
         mAmountOfLikeTextView.setText(data.getAmountOfLike() + "");
         mAmountOfCommnetTextView.setText(data.getAmountOfCommnet() + "");
-        //  mPhotoImageView.setImageDrawable(data.getPhotoId());
+
+        if(data.getRecruitData() != null){
+        setQuestItems(data);
+        } else{
+            setGallaryItems(data);
+            mPhotoImageView.setImageResource(data.getPhotoId());
+
+        }
+
+
+    }
+
+    public void setGallaryItems(HomeGallaryData data){
+
+
+    }
+    public void setQuestItems(HomeGallaryData data){
+
+
+
+        mRecruitEndTextView.setText(        String.format("모집기간 : %s",data.getRecruitData()));
+        mStartQuestTextView.setText(        String.format("시작날자 : %s",data.getQuestStartDay()));
+        mEndQuestTextView.setText(        String.format("완료기한 : %s",data.getQuestEndDay()));
 
 
     }
