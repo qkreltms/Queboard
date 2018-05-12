@@ -11,11 +11,14 @@ import android.widget.Toast;
 
 public class QueBoardCreateActivity extends AppCompatActivity {
 
+
+
     private Button startDateButton;
     private Button dueDateButton;
     private Button finishQueDateButton;
     private Button completionButton;
     private Button cancleButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,8 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         completionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 finish();
             }
         });
@@ -68,6 +73,10 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
 
     public void startDateButtonDialog(int year, int month, int dayOfMonth) {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {

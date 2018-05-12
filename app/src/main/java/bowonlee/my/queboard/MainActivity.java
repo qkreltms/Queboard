@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private String[] fragmentNames = {"Home", "Board", "Profile", "Notification"};
     private Button createButton;
     private Button messageButton;
-
+    private FragmentBoard fragmentBoard;
+    private FragmentProfile fragmentProfile ;
+    private FragmentHome fragmentHome;
 
 
     @Override
@@ -50,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(Color.RED);
         initViewPager();
+
     }
+
+
 
     class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
@@ -85,17 +90,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void initViewPager() {
         ViewPager pager;
-
+        
         pager = findViewById(R.id.MainActivity_viewPager_container);
         pager.setOffscreenPageLimit(4);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-        FragmentHome fragmentHome = new FragmentHome();
-        FragmentBoard fragmentBoard = new FragmentBoard();
-        FragmentProfile fragmentProfile = new FragmentProfile();
+        fragmentHome = new FragmentHome();
+        fragmentBoard = new FragmentBoard();
+        fragmentProfile = new FragmentProfile();
         FragmentAlarm fragmentAlarm = new FragmentAlarm();
 
+        
         adapter.addItem(fragmentHome);
         adapter.addItem(fragmentBoard);
         adapter.addItem(fragmentProfile);

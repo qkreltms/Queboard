@@ -1,8 +1,11 @@
 package bowonlee.my.queboard.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class HomeGallaryData extends HomeListData{
+public class HomeGallaryData extends HomeListData implements Parcelable{
 
 
     public HomeGallaryData(int level, String nickname, ArrayList<String> tagList, boolean isChecked) {
@@ -13,6 +16,21 @@ public class HomeGallaryData extends HomeListData{
         super();
     }
 
+
+    protected HomeGallaryData(Parcel in) {
+    }
+
+    public static final Creator<HomeGallaryData> CREATOR = new Creator<HomeGallaryData>() {
+        @Override
+        public HomeGallaryData createFromParcel(Parcel in) {
+            return new HomeGallaryData(in);
+        }
+
+        @Override
+        public HomeGallaryData[] newArray(int size) {
+            return new HomeGallaryData[size];
+        }
+    };
 
     public HomeGallaryData setQuestData(int profile, int level, String name, ArrayList<String> tags, boolean liked, boolean online, int likeSum, int commentSum, String recruit, String start, String end){
 
@@ -43,6 +61,12 @@ public class HomeGallaryData extends HomeListData{
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
-
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+    }
 }

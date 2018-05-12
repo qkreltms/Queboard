@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class BaseQuestData implements Parcelable{
+public class BaseQuestData {
 
     protected int level;
     protected String nickname;
@@ -30,30 +30,8 @@ public class BaseQuestData implements Parcelable{
         this.checkedLike = isChecked;
     }
 
-    protected BaseQuestData(Parcel in) {
-        level = in.readInt();
-        nickname = in.readString();
-        tagList = in.createStringArrayList();
-        checkedLike = in.readByte() != 0;
-        questStartDay = in.readString();
-        questEndDay = in.readString();
-        recruitData = in.readString();
-        photoId = in.readInt();
-        byte tmpIsOnline = in.readByte();
-        isOnline = tmpIsOnline == 0 ? null : tmpIsOnline == 1;
-    }
 
-    public static final Creator<BaseQuestData> CREATOR = new Creator<BaseQuestData>() {
-        @Override
-        public BaseQuestData createFromParcel(Parcel in) {
-            return new BaseQuestData(in);
-        }
 
-        @Override
-        public BaseQuestData[] newArray(int size) {
-            return new BaseQuestData[size];
-        }
-    };
 
     public ArrayList<String> getTagList() {
         return tagList;
@@ -132,23 +110,5 @@ public class BaseQuestData implements Parcelable{
         this.photoId = photoId;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int flags) {
-
-
-        parcel.writeInt(level);
-        parcel.writeString(nickname);
-        parcel.writeStringList(tagList);
-        parcel.writeByte((byte) (checkedLike ? 1 : 0));
-        parcel.writeString(questStartDay);
-        parcel.writeString(questEndDay);
-        parcel.writeString(recruitData);
-        parcel.writeInt(photoId);
-        parcel.writeByte((byte) (isOnline == null ? 0 : isOnline ? 1 : 2));
-    }
 }

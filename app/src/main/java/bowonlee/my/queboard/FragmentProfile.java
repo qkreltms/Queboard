@@ -67,15 +67,15 @@ public class FragmentProfile extends BaseFragment {
 
         List<RadarEntry> entries = new ArrayList<>();
 
-        entries.add(new RadarEntry(10f, 0));
-        entries.add(new RadarEntry(10f, 1));
-        entries.add(new RadarEntry(10f, 2));
-        entries.add(new RadarEntry(10f, 3));
-        entries.add(new RadarEntry(10f, 4));
-        entries.add(new RadarEntry(10f, 5));
-        entries.add(new RadarEntry(10f, 6));
+        entries.add(new RadarEntry(3f, 0));
+        entries.add(new RadarEntry(124f, 1));
+        entries.add(new RadarEntry(100f, 2));
+        entries.add(new RadarEntry(135f, 3));
+        entries.add(new RadarEntry(160f, 4));
+        entries.add(new RadarEntry(134f, 5));
+        entries.add(new RadarEntry(140f, 6));
 
-        final String[] quarters = new String[] {"#Quest", "#PBP", "#10G", "#고려대", "#PPT", "#트레이너", "#대학교", "#PSP"};
+        final String[] quarters = new String[] { "#PBP","#Quest", "#10G", "#고려대", "#PPT", "#트레이너", "#대학교", "#PSP"};
         IAxisValueFormatter formatter = new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {

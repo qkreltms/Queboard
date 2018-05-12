@@ -11,86 +11,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/fragment_profile_linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/fragment_profile_imageView_line"
+        <LinearLayout
+            android:id="@+id/fragment_profile_linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignBottom="@+id/fragment_profile_relativeLayout_header"
-            android:background="@android:color/black" />
-
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/fragment_profile_imageView_profileImage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
-                android:layout_marginRight="200dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/people"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/fragment_profile_textView_level"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:layout_marginStart="8dp"
-                android:text="LV 4"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/fragment_profile_imageView_profileImage"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/fragment_profile_textView_userId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
-                android:layout_marginRight="130dp"
-                android:text="Hyunhak93"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/fragment_profile_textView_level"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/fragment_profile_textView_tags"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="#Quest #PPT #10G #대학교 #과제물 #고려대 #뼈과근육 #PBP"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/fragment_profile_imageView_profileImage"
-                app:layout_constraintStart_toStartOf="@id/fragment_profile_textView_level"
-                app:layout_constraintTop_toBottomOf="@+id/fragment_profile_textView_level" />
-        </android.support.constraint.ConstraintLayout>
+                android:id="@+id/fragment_profile_imageView_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/fragment_profile_relativeLayout_header"
+                android:background="@android:color/black" />
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignBottom="@+id/fragment_profile_relativeLayout_header"
-            android:background="@android:color/black" />
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <com.github.mikephil.charting.charts.RadarChart
-            android:id="@+id/fragment_profile_chart_profile"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center" />
+                <ImageView
+                    android:id="@+id/fragment_profile_imageView_profileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/people"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fragment_profile_textView_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginStart="8dp"
+                    android:text="LV 4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/fragment_profile_imageView_profileImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fragment_profile_textView_userId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginRight="130dp"
+                    android:text="Hyunhak93"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/fragment_profile_textView_level"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fragment_profile_textView_tags"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="#Quest #PPT #10G #대학교 #과제물 #고려대 #뼈과근육 #PBP"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/fragment_profile_imageView_profileImage"
+                    app:layout_constraintStart_toStartOf="@id/fragment_profile_textView_level"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_profile_textView_level" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/fragment_profile_relativeLayout_header"
+                android:background="@android:color/black" />
+
+            <com.github.mikephil.charting.charts.RadarChart
+                android:id="@+id/fragment_profile_chart_profile"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -101,61 +101,53 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#Quest            .....            100" />
+                    android:text="#Quest            .....            124" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#PPT               .....            254" />
+                    android:text="#PPT               .....            160" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#10G                .....            465" />
+                    android:text="#10G                .....            108" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#대학교            .....           25" />
+                    android:text="#대학교            .....           140" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#고려대            .....           3" />
+                    android:text="#고려대            .....           135" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#PBP                .....           124" />
+                    android:text="#PBP                .....           3" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="#PSP                .....           46,135" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="#트레이너         .....           1,355" />
+                    android:text="#트레이너         .....           134" />
 
             </LinearLayout>
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_profile_bottomNavigationView"
+                app:itemTextColor="@android:color/white"
+                app:itemBackground="@android:color/holo_orange_dark"
+                app:itemIconTint="@android:color/white"
+                app:menu="@menu/bottom_navigation_profile"
 
-    </LinearLayout>
+                android:layout_marginBottom="30dp">
+            </android.support.design.widget.BottomNavigationView>
+        </LinearLayout>
 
     </ScrollView>
 
-    <android.support.design.widget.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_profile_bottomNavigationView"
-        app:itemTextColor="@android:color/white"
-        app:itemBackground="@android:color/holo_orange_dark"
-        app:itemIconTint="@android:color/white"
-        app:menu="@menu/bottom_navigation_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="30dp">
-    </android.support.design.widget.BottomNavigationView>
+
 </android.support.constraint.ConstraintLayout>
