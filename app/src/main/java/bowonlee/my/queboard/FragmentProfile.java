@@ -68,9 +68,4 @@ public class FragmentProfile extends BaseFragment {
         chart.setData(radarData);
         chart.invalidate(); // refresh
     }
-
-    public static FragmentProfile newInstance(){
-        return new FragmentProfile();
-    }
-
 }
