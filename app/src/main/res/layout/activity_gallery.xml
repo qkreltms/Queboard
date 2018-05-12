@@ -7,9 +7,12 @@
     tools:context=".GalleryActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/GalleryActivity_imageView"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/galleryActivity_recyclerView"
+        app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
