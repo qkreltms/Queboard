@@ -15,11 +15,11 @@ import java.util.List;
 
 import bowonlee.my.queboard.BaseFragment;
 import bowonlee.my.queboard.R;
-import bowonlee.my.queboard.models.ItemBoardList;
+import bowonlee.my.queboard.models.BaseQuestData;
 
 public class FragmentBoard extends BaseFragment {
 
-    private List<ItemBoardList> dummyItem;
+    private List<BaseQuestData> dummyItem;
 
     private RecyclerView mBoardList;
     private BoardListAdapter mBoardAdapter;
@@ -69,7 +69,7 @@ public class FragmentBoard extends BaseFragment {
 
 
         for(int i =0;i<10;i++){
-            dummyItem.add(new ItemBoardList(i,"dummy",taglist,true));
+            dummyItem.add(new BaseQuestData(i,"dummy",taglist,true));
         }
 
     }

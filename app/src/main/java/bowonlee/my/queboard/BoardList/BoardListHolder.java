@@ -1,14 +1,13 @@
 package bowonlee.my.queboard.BoardList;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import bowonlee.my.queboard.R;
-import bowonlee.my.queboard.models.ItemBoardList;
+import bowonlee.my.queboard.models.BaseQuestData;
 
 public class BoardListHolder extends RecyclerView.ViewHolder {
 
@@ -20,7 +19,7 @@ public class BoardListHolder extends RecyclerView.ViewHolder {
 
     private String tagString;
 
-    private ItemBoardList mItemBoardList ;
+    private BaseQuestData mItemBoardList ;
 
     public BoardListHolder(View itemView) {
         super(itemView);
@@ -33,7 +32,7 @@ public class BoardListHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setItems(ItemBoardList item){
+    public void setItems(BaseQuestData item){
             this.mItemBoardList = item;
 
             mLevelTextView.setText(String.format("Lv. %d",mItemBoardList.getLevel())) ;

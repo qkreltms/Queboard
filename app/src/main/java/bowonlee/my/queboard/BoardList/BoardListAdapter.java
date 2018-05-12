@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import bowonlee.my.queboard.R;
-import bowonlee.my.queboard.models.ItemBoardList;
+import bowonlee.my.queboard.models.BaseQuestData;
 
 public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
 
-    private List<ItemBoardList> items;
+    private List<BaseQuestData> items;
 
     BoardListAdapter(){
 
@@ -39,7 +39,7 @@ public class BoardListAdapter extends RecyclerView.Adapter<BoardListHolder>{
     }
 
 
-    public void setItem(List<ItemBoardList> items) {
+    public void setItem(List<BaseQuestData> items) {
         this.items = items;
         Log.e("items",items.size()+"");
         notifyDataSetChanged();

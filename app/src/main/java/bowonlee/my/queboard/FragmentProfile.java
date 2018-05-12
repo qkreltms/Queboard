@@ -28,12 +28,6 @@ public class FragmentProfile extends android.support.v4.app.Fragment {
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
 
 
-//        Glide.with(customViewHolder.imageView.getContext())
-//                .load(userModel.profileImageUrl)
-//                .apply(new RequestOptions().circleCrop())
-//                .into(customViewHolder.imageView);
-
-
         showRaderChart(view);
         return view;
     }
