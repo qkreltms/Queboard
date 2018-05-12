@@ -1,6 +1,7 @@
 package bowonlee.my.queboard;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,8 @@ import android.widget.Toast;
 
 public class QueBoardCreateActivity extends AppCompatActivity {
 
-
+    static final int REQUEST = 500;
+    static final int RESULT_OK = 501;
 
     private Button startDateButton;
     private Button dueDateButton;
@@ -61,7 +63,10 @@ public class QueBoardCreateActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
+                Intent intent = new Intent();
+                setResult(RESULT_OK);
                 finish();
+
             }
         });
 

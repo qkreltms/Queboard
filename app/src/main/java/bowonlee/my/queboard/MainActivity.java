@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentHome fragmentHome;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, QueBoardCreateActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,500);
             }
         });
         messageButton.setOnClickListener(new View.OnClickListener() {
@@ -110,5 +111,14 @@ public class MainActivity extends AppCompatActivity {
         pager.setAdapter(adapter);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == QueBoardCreateActivity.REQUEST){
+            if(resultCode == QueBoardCreateActivity.RESULT_OK){
+                fragmentHome.addDummy();
+            }
+        }
 
+    }
 }
