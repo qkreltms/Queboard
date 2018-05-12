@@ -52,7 +52,7 @@ public class FragmentProfile extends BaseFragment {
                         return true;
                     }
                     case R.id.action_project: {
-                        Intent intent = new Intent(view.getContext(), GalleryActivity.class);
+                        Intent intent = new Intent(view.getContext(), ProjectActivity.class);
                         startActivity(intent);
                         return true;
                     }

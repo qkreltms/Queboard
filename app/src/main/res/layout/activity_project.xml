@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProjectActivity">
+    tools:context=".ProjectActivity"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:text="진행중인 퀘스트"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/projectActivity_recyclerView_onGoingQues"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:text="완료된 퀘스트"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/projectActivity_recyclerView_completedQues"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
