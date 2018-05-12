@@ -56,19 +56,16 @@ public class FragmentBoard extends BaseFragment {
         dummyItem.clear();
 
         ArrayList<String> taglist = new ArrayList<>();
-        taglist.add("tag1");
-        taglist.add("tag2");
-        taglist.add("tag3");
+        taglist.add("운동");
+        taglist.add("스타트업");
+        taglist.add("PT");
         taglist.add("tag4");
         taglist.add("tag5");
         taglist.add("tag6");
         taglist.add("tag7");
-        taglist.add("tag8");
-        taglist.add("tag9");
-        taglist.add("tag10");
 
 
-        for(int i =0;i<10;i++){
+        for(int i =0;i<5;i++){
             dummyItem.add(new BaseQuestData(i,"dummy",taglist,true));
         }
 

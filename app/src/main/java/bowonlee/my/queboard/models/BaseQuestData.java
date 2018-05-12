@@ -8,16 +8,20 @@ import java.util.Date;
 
 public class BaseQuestData implements Parcelable{
 
-    int level;
-    String nickname;
-    ArrayList<String> tagList;
-    boolean checkedLike;
-    String questStartDay;
-    String questEndDay;
-    String recruitData;
-    int photoId;
+    protected int level;
+    protected String nickname;
+    protected ArrayList<String> tagList;
+    protected boolean checkedLike;
+    protected String questStartDay;
+    protected String questEndDay;
+    protected String recruitData;
+    protected int photoId;
+    protected int profilePhotoId;
 
     Boolean isOnline;
+
+    public BaseQuestData(){
+    }
 
     public BaseQuestData(int level, String nickname, ArrayList<String> tagList, boolean isChecked){
         this.level = level;
@@ -99,7 +103,34 @@ public class BaseQuestData implements Parcelable{
         return isOnline;
     }
 
+    public void setProfilePhotoId(int profilePhotoId) {
+        this.profilePhotoId = profilePhotoId;
+    }
 
+    public int getProfilePhotoId() {
+        return profilePhotoId;
+    }
+
+    public void setRecruitData(String recruitData) {
+        this.recruitData = recruitData;
+    }
+
+
+    public void setQuestStartDay(String questStartDay) {
+        this.questStartDay = questStartDay;
+    }
+
+    public void setQuestEndDay(String questEndDay) {
+        this.questEndDay = questEndDay;
+    }
+
+    public int getPhotoId() {
+        return photoId;
+    }
+
+    public void setPhotoId(int photoId) {
+        this.photoId = photoId;
+    }
 
     @Override
     public int describeContents() {

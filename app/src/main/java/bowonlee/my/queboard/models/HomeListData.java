@@ -6,6 +6,9 @@ import java.util.ArrayList;
         private int amountOfLike;
         private int amountOfCommnet;
 
+        public HomeListData(){
+
+        }
         public HomeListData(int level, String nickname, ArrayList<String> tagList, boolean isChecked) {
             super(level, nickname, tagList, isChecked);
         }
