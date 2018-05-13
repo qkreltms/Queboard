@@ -35,22 +35,22 @@ public class FragmentAlarm extends BaseFragment {
         teamButton = view.findViewById(R.id.fragment_alarm_button_team);
 
         ArrayList<AlarmModel> messages = new ArrayList<>();
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
-        messages.add(new AlarmModel("test", R.drawable.people));
+        messages.add(new AlarmModel("미니스탑으로 나왕", R.drawable.img1));
+        messages.add(new AlarmModel("아이스크림 먹자", R.drawable.sample_profile_1));
+        messages.add(new AlarmModel("ㅋㅋ", R.drawable.sample_profile_2));
+        messages.add(new AlarmModel("힝힝 진짜져? 진짜에요,", R.drawable.sample_profile_3));
+        messages.add(new AlarmModel("진짜 나가여~", R.drawable.img2));
+        messages.add(new AlarmModel("옹옹 나오셈ㅎㅎ", R.drawable.img3));
+        messages.add(new AlarmModel("아이 해버 팬~아이", R.drawable.img1));
+        messages.add(new AlarmModel("해버 파인애플!", R.drawable.img1));
+        messages.add(new AlarmModel("어!파인애플 팬!", R.drawable.img1));
+        messages.add(new AlarmModel("애플팬~", R.drawable.img1));
+        messages.add(new AlarmModel("파인애플팬~", R.drawable.img1));
+        messages.add(new AlarmModel("어!", R.drawable.img1));
+        messages.add(new AlarmModel("팬 파인애플 애플팬~", R.drawable.img1));
+        messages.add(new AlarmModel("오 형도 알아요 그거?", R.drawable.img1));
+        messages.add(new AlarmModel("나 무시하니 지금", R.drawable.img1));
+        messages.add(new AlarmModel("아재석진이잖아요..", R.drawable.img1));
 
         final RecyclerView recyclerView = view.findViewById(R.id.fragment_alarm_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
@@ -58,22 +58,22 @@ public class FragmentAlarm extends BaseFragment {
         recyclerView.setHasFixedSize(true);
 
         ArrayList<AlarmModel> messages1 = new ArrayList<>();
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
-        messages1.add(new AlarmModel("test", R.drawable.mail));
+        messages1.add(new AlarmModel("혹시 12학번 이지은?", R.drawable.img4));
+        messages1.add(new AlarmModel("잘 부탁드려여!", R.drawable.img5));
+        messages1.add(new AlarmModel("아 안녕하세요.", R.drawable.img6));
+        messages1.add(new AlarmModel("저 09학번 ~라고 합니다.", R.drawable.img7));
+        messages1.add(new AlarmModel("아...네ㅋ", R.drawable.img8));
+        messages1.add(new AlarmModel("카톡할수있죠?", R.drawable.img1));
+        messages1.add(new AlarmModel("...죄송한데", R.drawable.img2));
+        messages1.add(new AlarmModel("챕터7장맞나여??", R.drawable.img4));
+        messages1.add(new AlarmModel("그래서 자료준비 못했지?", R.drawable.img4));
+        messages1.add(new AlarmModel("네 알겠어요 좀따 언제봐요?", R.drawable.img4));
+        messages1.add(new AlarmModel("수업 시작하기 전...", R.drawable.img4));
+        messages1.add(new AlarmModel("제가 지금 밖이라...", R.drawable.img4));
+        messages1.add(new AlarmModel("물론이죠!!!", R.drawable.img4));
+        messages1.add(new AlarmModel("저 정말 열심히 할게여 ㅜㅜ!", R.drawable.img4));
+        messages1.add(new AlarmModel("제가 지금 몸이 안좋아서...", R.drawable.img4));
+        messages1.add(new AlarmModel("하... 네.. 시간 좀", R.drawable.img4));
 
         final RecyclerView recyclerView1 = view.findViewById(R.id.fragment_alarm_recyclerView1);
         recyclerView1.setLayoutManager(new LinearLayoutManager(view.getContext()));
@@ -122,7 +122,7 @@ public class FragmentAlarm extends BaseFragment {
 
             Glide.with(holder.itemView.getContext())
                     .load(quests.get(position).pictureUrl)
-                    .apply(new RequestOptions().centerCrop())
+                    .apply(new RequestOptions().circleCrop())
                     .into(((AlarmActivityRecyclerViewAdapter.CustomViewHolder) holder).imageView);
         }
 
