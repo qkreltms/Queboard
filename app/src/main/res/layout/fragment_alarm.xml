@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
+            android:theme="@style/MyButton"
             android:id="@+id/fragment_alarm_button_friend"
             android:text="Friend"
             android:layout_weight="1"
@@ -18,6 +19,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:theme="@style/MyButton"
             android:id="@+id/fragment_alarm_button_team"
             android:text="Team"
             android:layout_weight="1"
