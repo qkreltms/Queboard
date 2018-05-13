@@ -19,7 +19,7 @@ public class BoardListHolder extends RecyclerView.ViewHolder implements View.OnC
 
     private String tagString;
 
-    private BaseQuestData mItemBoardList ;
+   // private Quest mItemBoardList ;
 
     @Override
     public void onClick(View view) {
@@ -47,16 +47,18 @@ public class BoardListHolder extends RecyclerView.ViewHolder implements View.OnC
     }
 
     public void setItems(BaseQuestData item){
-            this.mItemBoardList = item;
+         //   this.mItemBoardList = item;
 
-            mLevelTextView.setText(String.format("Lv. %d",mItemBoardList.getLevel())) ;
-            mLikeBox.setChecked(mItemBoardList.isCheckedLike());
-            mNameTextView.setText(mItemBoardList.getNickname());
+       //     mLevelTextView.setText(String.format("Lv. %d",mItemBoardList.getLevel())) ;
+         //   mLikeBox.setChecked(mItemBoardList.isCheckedLike());
+      //      mNameTextView.setText(mItemBoardList.getNickname());
 
 
             mTagTextView.setText(tagString);
 
     }
+
+
 
     public void setOnClickListener(OnBoarderItemClickListener listener){
         this.listener = listener;

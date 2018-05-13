@@ -70,24 +70,22 @@ public class FragmentHome extends BaseFragment {
         SimpleDateFormat sdf = new SimpleDateFormat("yymmdd");
         String getTime = sdf.format(date);
 
-        dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_1, 4, "중대장님", tag1, false, true, 5, 3,
+        dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_1, 4, "박태현", tag1, false, true, 5, 3,
                 "18/5/14", "18/5/15", "18/6/17"));
   //      dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_2, 3, "temp", tag, true, true, 5, 3, getTime, getTime, getTime));
  //       dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_3, 5, "temp", tag, true, true, 5, 3, getTime, getTime, getTime));
 
 
-        dummy.add(new HomeGallaryData().setGallaryData(R.drawable.drawable_sample, 6, "gallary", tag2, true, 3, 4, R.drawable.drawable_sample));
+        dummy.add(new HomeGallaryData().setGallaryData(R.drawable.drawable_sample, 6, "asdfg2951", tag2, true, 3, 4, R.drawable.drawable_sample));
 
     }
 
     public void addDummy(){
         ArrayList<String> tag1 = new ArrayList<>();
-        tag1.add("#스타트업");tag1.add("#웨이트 트레이닝");tag1.add("#아주대");tag1.add("#오후 7시");tag1.add("#운동");tag1.add("#수원");
-
-        dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_1, 4, "중대장님", tag1, false, true, 5, 3,
-                "18/5/14", "18/5/15", "18/6/17"));
-        //
-
+        tag1.add("#수원");tag1.add("#아주대");
+        tag1.add("#헬스");tag1.add("#저녁 7시");tag1.add("#파트너");
+        dummy.add( new HomeGallaryData().setQuestData(R.drawable.sample_profile_1, 4, "박태현", tag1, false, false, 0, 0,
+                "18/5/14", "18/5/15", "18/5/31"));
     }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

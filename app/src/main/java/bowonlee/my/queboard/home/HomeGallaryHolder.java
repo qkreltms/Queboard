@@ -59,7 +59,7 @@ public class HomeGallaryHolder extends RecyclerView.ViewHolder {
         }
 
         String tagString = "";
-        for(int i = 1;i<data.getTagList().size();i++){
+        for(int i = 0;i<data.getTagList().size();i++){
             tagString += data.getTagList().get(i) + " ";
         }
         mTagStringTextView.setText(tagString);

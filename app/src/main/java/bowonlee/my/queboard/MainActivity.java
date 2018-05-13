@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == QueBoardCreateActivity.REQUEST){
             if(resultCode == QueBoardCreateActivity.RESULT_OK){
                 fragmentHome.addDummy();
+                fragmentBoard.addDummy();
             }
         }
 
