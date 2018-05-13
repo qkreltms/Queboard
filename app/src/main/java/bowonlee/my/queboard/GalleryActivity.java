@@ -40,9 +40,19 @@ public class GalleryActivity extends AppCompatActivity {
         public GalleryActivityRecyclerViewAdapter() {
             images = new ArrayList<>();
 
-            for (int i = 0; i < 50; i++) {
-                images.add(R.drawable.mail);
-            }
+            images.add(R.drawable.drawable_sample);
+            images.add(R.drawable.sample_profile_1);
+            images.add(R.drawable.sample_profile_2);
+            images.add(R.drawable.sample_profile_3);
+            images.add(R.drawable.img1);
+            images.add(R.drawable.img2);
+            images.add(R.drawable.img3);
+            images.add(R.drawable.img4);
+            images.add(R.drawable.img5);
+            images.add(R.drawable.img6);
+            images.add(R.drawable.img7);
+            images.add(R.drawable.img8);
+
         }
 
         @NonNull

@@ -29,15 +29,11 @@ public class ProjectActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.RED);
 
         ArrayList<ProjectModel> quests = new ArrayList<>();
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
-        quests.add(new ProjectModel("test", R.drawable.people));
+        quests.add(new ProjectModel("#수원 #아주대 #헬스 #저녁 7시 #파트너"));
+        quests.add(new ProjectModel("#스타트업 #웨이트 트레이닝 #아주대 #오후 7시 #운동 #수원"));
+        quests.add(new ProjectModel("#강한친구 #군대 #말년에 #유격이라니 #나는간부 #중대장 #실망"));
+        quests.add(new ProjectModel("#스타트업 #무박3일 #정신혼미"));
+
 
         RecyclerView recyclerView = findViewById(R.id.projectActivity_recyclerView_onGoingQues);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -45,15 +41,13 @@ public class ProjectActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         ArrayList<ProjectModel> quests1 = new ArrayList<>();
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
-        quests1.add(new ProjectModel("test", R.drawable.mail));
+        quests1.add(new ProjectModel("#수원 #아주대 #헬스 #저녁 6시 #파트너"));
+        quests1.add(new ProjectModel("#수원 #농구 #슬램덩크 #8시 #운동 #아주대"));
+        quests1.add(new ProjectModel("#찜질방 #게르마늄 #황토사우나 #식혜 #김밥 #얼음사우나 #무릉도원"));
+        quests1.add(new ProjectModel("#수원 #아주대 #웨이트 트레이닝 #저녁 7시 #파트너"));
+        quests1.add(new ProjectModel("#이천 #7군단 #사령부 #오늘도 #깊은실망"));
+        quests1.add(new ProjectModel("#이천 #축구 #선착순 #저녁 7시 #연병장"));
+
 
 
         RecyclerView recyclerView1 = findViewById(R.id.projectActivity_recyclerView_completedQues);
@@ -83,10 +77,7 @@ public class ProjectActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
             ((CustomViewHolder) holder).textView.setText(quests.get(position).title);
 
-            Glide.with(holder.itemView.getContext())
-                    .load(quests.get(position).pictureUrl)
-                    .apply(new RequestOptions().centerCrop())
-                    .into(((CustomViewHolder)holder).imageView);
+             ((CustomViewHolder) holder).imageView.setVisibility(View.GONE);
         }
 
         @Override
@@ -127,10 +118,7 @@ public class ProjectActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
             ((CustomViewHolder) holder).textView.setText(quests.get(position).title);
 
-            Glide.with(holder.itemView.getContext())
-                    .load(quests.get(position).pictureUrl)
-                    .apply(new RequestOptions().centerCrop())
-                    .into(((CustomViewHolder)holder).imageView);
+            ((CustomViewHolder) holder).imageView.setVisibility(View.GONE);
         }
 
         @Override

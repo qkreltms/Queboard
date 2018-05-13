@@ -40,21 +40,21 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         startDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startDateButtonDialog(2018, 05, 12);
+                startDateButtonDialog(2018, 04, 12);
             }
         });
 
         dueDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dueDateButtonDialog( 2018, 05, 12);
+                dueDateButtonDialog( 2018, 04, 12);
             }
         });
 
         finishQueDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishQueDateButtonDialog(2018, 05, 12);
+                finishQueDateButtonDialog(2018, 04, 12);
             }
         });
 
@@ -87,7 +87,7 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                startDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month) + " 월" + Integer.toString(dayOfMonth) + " 일");
+                startDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month+1) + " 월" + Integer.toString(dayOfMonth) + " 일");
             }
         }, year, month, dayOfMonth);
         dialog.show();
@@ -97,7 +97,7 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                dueDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month) + " 월" + Integer.toString(dayOfMonth) + " 일");
+                dueDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month+1) + " 월" + Integer.toString(dayOfMonth) + " 일");
             }
         }, year, month, dayOfMonth);
         dialog.show();
@@ -107,7 +107,7 @@ public class QueBoardCreateActivity extends AppCompatActivity {
         DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                finishQueDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month) + " 월" + Integer.toString(dayOfMonth) + " 일");
+                finishQueDateButton.setText(Integer.toString(year) + " 년" + Integer.toString(month+1) + " 월" + Integer.toString(dayOfMonth) + " 일");
             }
         }, year, month, dayOfMonth);
         dialog.show();

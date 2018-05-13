@@ -11,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.github.mikephil.charting.charts.RadarChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
@@ -32,7 +35,11 @@ public class FragmentProfile extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
-
+        ImageView profileImageView = view.findViewById(R.id.fragment_profile_imageView_profileImage);
+        Glide.with(view.getContext())
+                .load(R.drawable.sample_profile_1)
+                .apply(new RequestOptions().circleCrop())
+                .into(profileImageView);
 
         showRaderChart(view);
         initBottomNavi(view);

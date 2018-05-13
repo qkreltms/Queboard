@@ -5,23 +5,26 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_marginLeft="10dp"
-        android:scaleType="fitXY"
-        android:id="@+id/item_project_imageView"
         android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:id="@+id/item_project_imageView"
+        />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
         <TextView
-            android:gravity="center"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:text="현재 퀘스트"
-            android:textSize="30dp"
             android:id="@+id/item_project_textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="현재 퀘스트"
+            android:textStyle="bold"
+            android:textSize="15dp" />
     </RelativeLayout>
 </LinearLayout>

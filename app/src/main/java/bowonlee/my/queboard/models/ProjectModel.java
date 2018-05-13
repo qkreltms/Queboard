@@ -9,4 +9,7 @@ public class ProjectModel {
         this.title = title;
         this.pictureUrl = pictureUrl;
     }
+    public ProjectModel(String title) {
+        this.title = title;
+    }
 }
